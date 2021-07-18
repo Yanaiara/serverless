@@ -29,16 +29,23 @@ functions:
     handler: handler.patientsList
     events:
       - http:
-          path: patientes
+          path: patients
           method: get
 
   registrationPatient:
     handler: handler.registrationPatient
     events:
       - http:
-          path: patientes/{patientId}
+          path: patients/{patientId}
           method: get
-    
+
+  createPatients:
+    handler: handler.createPatients
+    events:
+      - http:
+          path: patients
+          method: post
+
 resources:
   Resources:
     PatientsTable:
