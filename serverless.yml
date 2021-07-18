@@ -16,6 +16,13 @@ functions:
     handler: handler.patientsList
     events:
       - http:
-          path: pacientes
+          path: patientes
+          method: get
+
+  registrationPatient:
+    handler: handler.registrationPatient
+    events:
+      - http:
+          path: patientes/{patientId}
           method: get
     
