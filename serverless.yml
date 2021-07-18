@@ -1,4 +1,7 @@
-service: patients-registration
+service: myService
+disabledDeprecations:
+  - CODE_1 # To disable specific deprecation with code "CODE_1"
+  - '*' # To disable all deprecation messages
 frameworkVersion: '2'
 
 provider:
@@ -11,3 +14,8 @@ provider:
 functions:
   patientsList:
     handler: handler.patientsList
+    events:
+      - http:
+          path: pacientes
+          method: get
+    
